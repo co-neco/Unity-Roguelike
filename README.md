@@ -27,17 +27,20 @@ Player.OnCantMove[Wall](.Wall component...)".Because I'm a beginer of Unity,so I
   if ((hit.collider.tag != "InnerWall" && GameManager.instance.playersTurn == true)
           || (hit.collider.tag != "Player" && GameManager.instance.enemiesMoving == true))
             noFeedback = true;
+            
   "
   
   when what player collides with isn't InnerWall,we shouldn't execute 'Wall hit=component as wall;' .Here I use noFeedback to judge whether what player collide with is InnerWall.
   
   2.open the Player.cs,and add
   "
+  
    if (noFeedback == true)
         {
             noFeedback = false;
             return;
         }
+        
   "
   when what player collide with isn't InnerWall,noFeedback is true.But in thenext time,player will collide with another object,so we should reset noFeedback to false.In this way,we can solve the problem.
   
