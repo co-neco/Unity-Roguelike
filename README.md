@@ -56,4 +56,4 @@ since the function is obsolete,so we should use
 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
 ".
-And add 'using UnityEngine.SceneManagement;'
+For using the function,we should also add 'using UnityEngine.SceneManagement;'
