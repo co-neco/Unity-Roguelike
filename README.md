@@ -44,3 +44,16 @@ Player.OnCantMove[Wall](.Wall component...)".Because I'm a beginer of Unity,so I
   "
   when what player collide with isn't InnerWall,noFeedback is true.But in thenext time,player will collide with another object,so we should reset noFeedback to false.In this way,we can solve the problem.
   
+
+The second issue I encountered is 
+"
+Application.LoadLevel(Application.loadedLevel);
+
+".
+since the function is obsolete,so we should use
+"
+
+SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+".
+And add 'using UnityEngine.SceneManagement;'
